@@ -22,7 +22,30 @@
   - Horas Extras: Funcionários desligados tendem a realizar mais horas extras do que funcionários ativos, mostrando uma diferença significativa entre os dois grupos. Isso indica que a carga de trabalho adicional pode estar associada ao desligamento.
   - **Em resumo, entre as variáveis analisadas, Pontuação de Desempenho e Horas Extras mostraram uma relação significativa com a taxa de desligamento. Funcionários com pontuações de desempenho mais altas e aqueles que realizam mais horas extras têm uma maior probabilidade de se desligarem da empresa.**
 
-## 2 -  Aprendizado de máquina supervisionado (Classificação)
+## 2 -  Aprendizado de máquina supervisionado (classificação)
 - Construímos quatro modelos de Machine Learning utilizando três estimadores diferentes: KNN, SVC e XGBoost. Realizamos pré-processamento das variáveis, selecionando as mais adequadas para cada estimador e otimizando os hiperparâmetros. A métrica escolhida para a avaliação dos modelos foi o recall. Ao otimizar o recall, garantimos que estamos minimizando a quantidade de falsos negativos, ou seja, identificando o maior número possível de funcionários com risco de desligamento.
 - Ao final, utilizamos uma abordagem de ensemble que combina as forças de dois algoritmos de machine learning (SVM e XGBoost) para melhorar o desempenho da classificação através de um VotingClassifier. O resultado final foi um recall de 0.62 nos dados de teste. Essa métrica, embora abaixo do desejado, deve-se ao fato de que as variáveis possuem baixa relação com o target. Apenas duas variáveis tinham uma relação média: Pontuação de Desempenho e Horas Extras. Algumas variáveis tiveram que ser excluídas, como Data de Desligamento e Meses de Serviço, que continham dados sintéticos e representavam dados futuros que não seriam vistos pelo modelo.
 - Em resumo, os dados sugerem que o modelo de classificação tem um desempenho razoável, mas há espaço para melhorias. Ele é melhor do que um modelo aleatório, mas ainda não é excelente.
+
+## 3 -  Aprendizado de máquina não supervisionado (clusterização)
+- Para entender melhor os padrões entre os funcionários que deixam a empresa, utilizamos o algoritmo K-Means. O K-Means conseguiu segmentar os funcionários em dois clusters, permitindo-nos identificar alguns padrões de comportamento:
+  - Cluster 0:
+    - Funcionários mais jovens
+    - Pontuação de desempenho ligeiramente menor
+    - Média de satisfação no trabalho ligeiramente maior
+    - Média de salário e de horas extras significativamente menor
+    - Grupo formado quase que exclusivamente por funcionários de nível júnior a pleno
+   
+  - Cluster 1:
+    - Funcionários mais velhos
+    - Pontuação de desempenho ligeiramente maior
+    - Média de satisfação no trabalho ligeiramente menor
+    - Média de salário e de horas extras significativamente maior
+    - Todos os funcionários são de nível sênior
+    - 
+- **Esses padrões podem ajudar a empresa a desenvolver estratégias específicas para melhorar a retenção de funcionários em cada grupo, abordando as necessidades e preocupações específicas de cada cluster.**
+
+## Conclusões Gerais
+- Entre as variáveis analisadas, a Pontuação de Desempenho e as Horas Extras mostraram uma relação significativa com a taxa de desligamento. Funcionários com pontuações de desempenho mais altas e aqueles que realizam mais horas extras tendem a ter uma maior probabilidade de se desligarem da empresa.
+- Nosso modelo apresentou um desempenho razoável, com um recall de 62,16%. Isso indica que o modelo conseguiu identificar 62,16% de todas as instâncias positivas reais (funcionários propensos a sair). Embora o modelo ainda possa ser aprimorado, ele já é capaz de capturar uma parcela significativa dos funcionários em risco de desligamento.
+- A análise de clusterização dos funcionários desligados revelou que o Cluster 1 é composto por funcionários de nível sênior que fazem mais horas extras e recebem um salário maior. Este perfil específico pode ser um bom indicativo para prever a saída de funcionários.
