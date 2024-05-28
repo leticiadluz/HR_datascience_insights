@@ -49,3 +49,12 @@
 - Entre as variáveis analisadas, a Pontuação de Desempenho e as Horas Extras mostraram uma relação significativa com a taxa de desligamento. Funcionários com pontuações de desempenho mais altas e aqueles que realizam mais horas extras tendem a ter uma maior probabilidade de se desligarem da empresa.
 - Nosso modelo apresentou um desempenho razoável, com um recall de 62,16%. Isso indica que o modelo conseguiu identificar 62,16% de todas as instâncias positivas reais (funcionários propensos a sair). Embora o modelo ainda possa ser aprimorado, ele já é capaz de capturar uma parcela significativa dos funcionários em risco de desligamento.
 - A análise de clusterização dos funcionários desligados revelou que o Cluster 1 é composto por funcionários de nível sênior que fazem mais horas extras e recebem um salário maior. Este perfil específico pode ser um bom indicativo para prever a saída de funcionários.
+
+## Ferramentas utilizadas
+
+* Google Colab
+  
+## Linguagem utilizada
+
+* Python
+
