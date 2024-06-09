@@ -7,6 +7,7 @@
 
 -  Este projeto faz parte do desafio da [Data Viking](https://www.dataviking.com.br/), onde foram disponibilizados dados reais de uma software house para os participantes interessados.
 -  **Qualquer análise e estudo baseados em dados poderiam ser realizados, como: Modelo de Turnover, Cluster de Funcionários, Perfil de Risco, Ciclos de Rotatividade, entre outros.**
+-  Este projeto me rendeu o 1º lugar entre mais de 500 inscritos no desafio.
 
 
 ## 1 -  Análise Exploratória de Dados
